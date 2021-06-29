@@ -7,17 +7,17 @@ function Dog() {
  useEffect(()=>
  {
     axios.get('https://dog.ceo/api/breeds/image/random').then((response)=>{
-        console.log(response.data.message)
+        console.log()
        setImage(response.data.message)
     })
  },[])
+  
  const degistir=()=>
  {
-   axios.get('https://dog.ceo/api/breeds/image/random').then((response)=>{
-   console.log(response.data.message)
-     setImage(response.data.message)
- })
- }
+    axios.get('https://dog.ceo/api/breeds/image/random').then((response)=>{
+        console.log()
+       setImage(response.data.message)   
+    })}
 
     return (
     
