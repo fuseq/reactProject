@@ -6,23 +6,27 @@ function Dog() {
  useEffect(()=>
  {
     axios.get('https://dog.ceo/api/breeds/image/random').then((response)=>{
-        console.log(response.data.message)
+        console.log()
        setImage(response.data.message)
     })
 
 
  },[])
+  
  const degistir=()=>
  {
-     
- }
+    axios.get('https://dog.ceo/api/breeds/image/random').then((response)=>{
+        console.log()
+       setImage(response.data.message)   
+    })}
 
     return (
     
         <div>
-               
-               <button onClick={}></button>
-             <img alt="köpek resmi" src={dogImage}/>
+                
+             <img src={dogImage}/>
+             <button onClick={degistir}
+        >arttir</button>
         </div>
          
        );
