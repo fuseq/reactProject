@@ -2,6 +2,7 @@ import React, {useState,useEffect,} from 'react';
 import axios from 'axios';
 
 function Dog() {
+    
     const [dogImage, setImage] = useState();
  useEffect(()=>
  {
@@ -9,20 +10,23 @@ function Dog() {
         console.log(response.data.message)
        setImage(response.data.message)
     })
-
-
  },[])
  const degistir=()=>
  {
-     
+   axios.get('https://dog.ceo/api/breeds/image/random').then((response)=>{
+   console.log(response.data.message)
+     setImage(response.data.message)
+ })
  }
 
     return (
     
         <div>
                
-               <button onClick={}></button>
-             <img alt="köpek resmi" src={dogImage}/>
+               
+             <img style={{height:300}} alt="köpek resmi" src={dogImage}/>
+             <br></br>
+             <button onClick={degistir}>fusekin cuku</button>
         </div>
          
        );
