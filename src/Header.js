@@ -3,6 +3,7 @@ import './App.css';
 import Sayac from './Sayac';
 import RedButton from './RedButton';
 import Homepage from './Homepage';
+import MultiDog from './MultiDog';
 import Dog from './Dog';
 import About from './About';
 import React from "react";
@@ -29,6 +30,9 @@ function Header() {
               <li>
                 <Link to="/redbutton">redbutton</Link>
               </li>
+              <li>
+                <Link to="/multidog">multidog</Link>
+              </li>
             </ul>
             <Switch>
             <Route exact path="/">
@@ -46,6 +50,11 @@ function Header() {
               <RedButton buttonName="Purple"><a href="https://www.w3schools.com">limk 3</a></RedButton>
               <RedButton buttonName="Orange"><a href="https://türkçebul.com">limk 4</a></RedButton>
             </Route>
+            <Route path="/multidog">
+              <MultiDog/>
+           
+            </Route>
+            
             
           </Switch>
         </Router>
